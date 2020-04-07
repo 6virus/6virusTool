@@ -9,3 +9,8 @@ rename your password list to "passwords.txt" and move it to 6virustool folder th
 
 ## How to use Website Host IP?
 copy website domain and paste it in "Domain Target"
+
+## Screenshots
+
+![6virus](6virus.png)
+
