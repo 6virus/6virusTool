@@ -12,5 +12,5 @@ copy website domain and paste it in "Domain Target"
 
 ## Screenshots
 
-![6virus](https://i.ibb.co/5R0s3Nn/6virus.png)
+![6virus](https://i.ibb.co/ZmpQ1fF/Screenshot-from-2020-04-10-09-57-51.png)
 
