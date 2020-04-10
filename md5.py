@@ -39,6 +39,10 @@ def choose2():
     print("    [5] SHA-384        [6] SHA-512    ")
     print("                                      ")
     print("      [7] Base64     [8] Hex          ")
+    print("                                      ")
+    print("     [9] Priv8 Cipher(Can't decode)   ")
+    print("                                      ")
+    print("     [10] Priv8 Cipher(Can decode)    ")
     print("======================================")
     print("\n")
 def choose3():
@@ -46,70 +50,124 @@ def choose3():
     print("======================================")
     print("===========Coded by @1zsb=============")
     print("                                      ")
-    print("  [1] Base64  ===========   [2] Hex   ")
-    print("                =======               ")
+    print("  [1] Base64               [2] Hex    ")
+    print("                                      ")
+    print("          [3] Priv8 Cipher 2          ")
+    print("                                      ")
     print("======================================")
     print("\n")
 
 
 def incryptmd5():
     str1 = input(mawar+"insert The words to get it MD5 Hash : ")
-    result = hashlib.md5(str1.encode())
+    result1 = hashlib.md5(str1.encode())
     print("Your MD5 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result1.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def incryptsha1():
     str3 = input(mawar+"insert The words to get it SHA-1 Hash : ")
-    result = hashlib.sha1(str3.encode())
+    result2 = hashlib.sha1(str3.encode())
     print("Your SHA-1 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result2.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def incryptsha224():
     str5 = input(mawar+"insert The words to get it SHA-224 Hash : ")
-    result = hashlib.sha224(str5.encode())
+    result3 = hashlib.sha224(str5.encode())
     print("Your SHA-224 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result3.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def incryptsha256():
     str7 = input(mawar+"insert The words to get it SHA-256 Hash : ")
-    result = hashlib.sha256(str7.encode())
+    result4 = hashlib.sha256(str7.encode())
     print("Your SHA-256 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result4.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def incryptsha384():
     str9 = input(mawar+"insert The words to get it SHA-384 Hash : ")
-    result = hashlib.sha384(str9.encode())
+    result5 = hashlib.sha384(str9.encode())
     print("Your SHA-384 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result5.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def incryptsha512():
     str11 = input(mawar+"insert The words to get it SHA-512 Hash : ")
-    result = hashlib.sha512(str11.encode())
+    result6 = hashlib.sha512(str11.encode())
     print("Your SHA-512 Hash is : ", end ="")
-    print(result.hexdigest())
+    print(result6.hexdigest())
     input("Done .. Press Enter To Exit ..")
 def encodebase64():
-    message = input(mawar+"insert The words to get it Base64 Hash : ")
-    message_bytes = message.encode('ascii')
-    base64_bytes = base64.b64encode(message_bytes)
-    base64_message = base64_bytes.decode('ascii')
-    print("Your Base64 hash is : "+ base64_message)
+    message1 = input(mawar+"insert The words to get it Base64 Hash : ")
+    message_bytes1 = message.encode('ascii')
+    base64_bytes1 = base64.b64encode(message_bytes1)
+    base64_message1 = base64_bytes1.decode('ascii')
+    print("Your Base64 hash is : "+ base64_message1)
     input("Done .. Press Enter To Exit ..")
 def decodebase64():
-    message = input(mawar+"insert your Base64 Hash : ")
-    message_bytes = message.encode('ascii')
-    base64_bytes = base64.b64decode(message_bytes)
-    base64_message = base64_bytes.decode('ascii')
-    print("Your Base64 hash is : "+ base64_message)
+    message2 = input(mawar+"insert your Base64 Hash : ")
+    message_bytes2 = message.encode('ascii')
+    base64_bytes2 = base64.b64decode(message_bytes2)
+    base64_message2 = base64_bytes2.decode('ascii')
+    print("Your Base64 hash is : "+ base64_message2)
     input("Done .. Press Enter To Exit ..")
 def encodehex():
     hex1 = input(mawar+"insert The words to get it Hex Hash : ").encode('utf-8')
-    res = hex1.hex()
-    print("Your Hex hash is : "+ res)
+    res1 = hex1.hex()
+    print("Your Hex hash is : "+ res1)
+    input("Done .. Press Enter To Exit ..")
 def decodehex():
     hex2 = input(mawar+"insert The words to get it Hex Hash : ")
-    res = bytes.fromhex(hex2).decode('utf-8')
-    print("Your Hex hash is : "+ res)
+    res2 = bytes.fromhex(hex2).decode('utf-8')
+    print("Your Hex hash is : "+ res2)
+    input("Done .. Press Enter To Exit ..")
+def priv8encode():
+    pri = input("insert The Words to get it Priv8 Cipher Hash: ")
+    result8 = hashlib.md5(pri.encode())
+    md5 = result8.hexdigest()
+    rev = md5[::-1]
+    result2 = hashlib.sha1(rev.encode())
+    sha1 = result2.hexdigest()
+    rev1 = sha1[::-1]
+    result3 = hashlib.sha224(rev1.encode())
+    sha224 = result3.hexdigest()
+    result4 = hashlib.sha256(sha224.encode())
+    sha256 = result4.hexdigest()
+    rev2 = sha256[::-1]
+    result5 = hashlib.sha384(rev2.encode())
+    sha384 = result5.hexdigest()
+    rev3 = sha384[::-1]
+    result6 = hashlib.sha512(rev3.encode())
+    sha512 = result6.hexdigest()
+    message_bytes1 = sha512.encode('ascii')
+    base64_bytes1 = base64.b64encode(message_bytes1)
+    base64_message1 = base64_bytes1.decode('ascii')
+    rev4 = base64_message1[::-1]
+    hex1 = rev.encode('utf-8')
+    res19 = hex1.hex()
+    rev5 = res19[::-1]
+    result84 = hashlib.sha512(rev5.encode())
+    sha5122 = result84.hexdigest()
+    print("Your Priv8 Cipher is : "+sha5122)
+    input("Done .. Press Enter To Exit ..")
+def priv8ende():
+    hex1 = input(mawar+"insert The words to get it Priv8 Cipher 2 : ").encode('utf-8')
+    res1 = hex1.hex()
+    rev1 = res1[::-1]
+    message_bytes1 = rev1.encode('ascii')
+    base64_bytes1 = base64.b64encode(message_bytes1)
+    base64_message1 = base64_bytes1.decode('ascii')
+    rev2 = base64_message1[::-1]
+    print("Your Priv8 Cipher 2 is : "+rev2)
+    input("Done .. Press Enter To Exit ..")
+def decodepriv8():
+    pri = input(mawar+"insert Your Priv8 Cipher 2 : ")
+    rev1 = pri[::-1]
+    message_bytes2 = rev1.encode('ascii')
+    base64_bytes2 = base64.b64decode(message_bytes2)
+    base64_message2 = base64_bytes2.decode('ascii')
+    hex2 = base64_message2[::-1]
+    res0 = bytes.fromhex(hex2).decode('utf-8')
+    print("Your Priv8 Cipher is : "+res0)
+    input("Done .. Press Enter To Exit ..")
+
 
 def cipher():
     print("  ______   __            __                           ")
@@ -163,6 +221,12 @@ if option2 == '1':
     elif option3 == '8':
         print("\n")
         encodehex()
+    elif option3 == '9':
+        print("\n")
+        priv8encode()
+    elif option3 == '10':
+        print("\n")
+        priv8ende()
 elif option2 == '2':
     choose3()
     option4 = input("root@root:~# ")
@@ -172,3 +236,6 @@ elif option2 == '2':
     elif option4 == '2':
         print("\n")
         decodehex()
+    elif option4 == '3':
+        print("\n")
+        decodepriv8()
