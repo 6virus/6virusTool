@@ -1,0 +1,107 @@
+# -*- coding: utf-8 -*-
+
+import sys
+import random
+import time
+import os
+import urllib2
+import json
+
+
+def draw():
+    os.system("clear")
+    print("                  ████████████████████████            ")
+    print("              ████████████████████      ██████        ")
+    print("    ██      ████  ████████████    ██      ██████      ")
+    print("      ████████  ██████████████      ██      ██████    ")
+    print("  ██    ████    ████████████████    ██        ████████")
+    print("    ██████      ██████████████████████        ██████  ")
+    print("██    ████      ██▒▒▒▒██████████▒▒▒▒██        ████    ")
+    print("  ████          ██▒▒▒▒██████████▒▒▒▒██        ██      ")
+    print("                ██▒▒▒▒██████████▒▒▒▒██        ██      ")
+    print("                ██▒▒▒▒▒▒██████▒▒▒▒▒▒██      ██        ")
+    print("                ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                ")
+    print("                  ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓██    ██            ")
+    print("              ██████████████████████████              ")
+    print("\n")
+def menu():
+    print("\n")
+    print("======================================")
+    print("===========Coded by @1zsb=============")
+    print("                                      ")
+    print("  [1] Start            [99]Main Menu  ")
+    print("                 ==                   ")
+    print("======================================")
+    print("\n")
+def menu2():
+    print("\n")
+    print("======================================")
+    print("===========Coded by @1zsb=============")
+    print("                                      ")
+    print("  [1] Target IP           [2] My IP   ")
+    print("                 ==                   ")
+    print("======================================")
+    print("\n")
+draw()
+menu()
+option1 = input("root@root:~# ")
+if option1 == 1:
+    os.system("clear")
+    draw()
+    menu2()
+    option = input("root@root:~# ")
+    if option == 1:
+        ip = raw_input("What Your Target IP : ")
+        url = "https://ipapi.co/"
+        response = urllib2.urlopen(url + ip + "/json")
+        data = response.read()
+        values = json.loads(data)
+        print("++++++++++++++++++++++++++++++++++++++++++++++++")
+        print ("\r")
+        print(" IP              :  " + values['ip'])
+        print(" City            :  " + values['city'])
+        print(" Region          :  " + values['region'])
+        print(" Region Code     :  " + values['region_code'])
+        print(" Country         :  " + values['country_name'])
+        print(" Country Capital :  " + values['country_capital'])
+        print(" Country Area    :  " + str(values['country_area']))
+        print(" Location        :  " + str(values['latitude'])+ " " + str(values['longitude']))
+        print(" Continent       :  " + values['continent_code'])
+        print(" Time Zone       :  " + values['timezone'])
+        print(" Currency        :  " + values['currency'])
+        print(" Calling Code    :  " + values['country_calling_code'])
+        print(" Organisation    :  " + values['org'])
+        print(" ASN             :  " + values['asn'])
+        print ("\r")
+        raw_input("Done .. Press Enter To Exit ..")
+    elif option == 2:
+        url = "https://ipapi.co/"
+        url2 = "http://ipinfo.io/"
+        response = urllib2.urlopen(url + "json")
+        response2 = urllib2.urlopen(url2 + "json")
+        data = response.read()
+        data2 = response2.read()
+        values = json.loads(data)
+        values2 = json.loads(data2)
+        print("++++++++++++++++++++++++++++++++++++++++++++++++")
+        print ("\r")
+        print(" Public IP       :  " + values['ip'])
+        print(" Private IP      :  " + values2['ip'])
+        print(" City            :  " + values['city'])
+        print(" Region          :  " + values['region'])
+        print(" Region Code     :  " + values['region_code'])
+        print(" Country         :  " + values['country_name'])
+        print(" Country Capital :  " + values['country_capital'])
+        print(" Country Area    :  " + str(values['country_area']))
+        print(" Location        :  " + str(values['latitude'])+ " " + str(values['longitude']))
+        print(" Continent       :  " + values['continent_code'])
+        print(" Time Zone       :  " + values['timezone'])
+        print(" Currency        :  " + values['currency'])
+        print(" Calling Code    :  " + values['country_calling_code'])
+        print(" Organisation    :  " + values['org'])
+        print(" ASN             :  " + values['asn'])
+        print ("\r")
+        raw_input("Done .. Press Enter To Exit ..")
+elif option1 == 99:
+    os.system("clear")
+    os.system("python3 start.py")

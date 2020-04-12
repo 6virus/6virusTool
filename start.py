@@ -18,7 +18,7 @@ def virus():
               .$  ^c           $$$$$e$$$$$$$$.      2) Brute Force
               d$L  4.         4$$$$$$$$$$$$$$b      3) Combo Editor
               $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$      4) Website Host IP
-  e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
+  e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$      5) IP lockup
  z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
 4$$$$L        $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
 ^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
@@ -27,8 +27,8 @@ def virus():
           ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
              "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"   [Cracking]
                "*$$$  *=%4.$ L L$ P3$$$F $$$P"
-                  "$   "%*ebJLzb$e$$$$$b $P"        5) Reverse Text
-                    %..      4$$$$$$$$$$ "          6) Cipher
+                  "$   "%*ebJLzb$e$$$$$b $P"        6) Reverse Text
+                    %..      4$$$$$$$$$$ "          7) Cipher
                      $$$e   z$$$$$$$$$$%
                       "*$c  "$$$$$$$P"
                        ."""*$$$$$$$$bc
@@ -37,7 +37,7 @@ def virus():
           .=*""""    .e$*"          "*bc  "*$e..
         .$"        .z*"               ^*$e.   "*****e.
         $$ee$c   .d"                     "*$.        3.
-        ^*$E")$..$"                         *   .ee==d% [ 6virus Tool v0.5]
+        ^*$E")$..$"                         *   .ee==d% [ 6virus Tool v0.7]
            $.d$$$*                           *  J$$$e*
             """""                              "$$$"
 
@@ -66,7 +66,10 @@ elif option == '4':
     os.system("python3 ip.py")
 elif option == '5':
     os.system("clear")
-    os.system("python3 Reverse.py")
+    os.system("python2 iptrack.py")
 elif option == '6':
+    os.system("clear")
+    os.system("python3 Reverse.py")
+elif option == '7':
     os.system("clear")
     os.system("python3 md5.py")

@@ -83,6 +83,8 @@ print
 mawar = ("\033[31;1m")
 option = input("root@root:~# ")
 if option == 1:
+    os.system("clear")
+    ddos()
     ip = raw_input(mawar+"IP Target : ")
     port = input(mawar+"Port       : ")
 

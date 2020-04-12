@@ -28,6 +28,8 @@ option = input("root@root:~# ")
 
 mawar = ("\033[31;1m")
 if option == '1':
+    os.system("clear")
+    combo()
     vi = input(mawar+"user : @")
     input("\nPress Enter To Start ..")
     print("")

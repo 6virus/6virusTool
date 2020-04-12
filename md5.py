@@ -4,7 +4,7 @@ import random
 import time
 import hashlib
 import base64
-
+os.system("clear")
 mawar = ("\033[31;1m")
 
 def menu():
@@ -189,12 +189,16 @@ menu()
 option1 = input("root@root:~# ")
 
 if option1 == '1':
+    os.system("clear")
+    cipher()
     choose()
     option2 = input("root@root:~# ")
 elif option1 == '99':
     os.system("clear")
     os.system("python3 start.py")
 if option2 == '1':
+    os.system("clear")
+    cipher()
     choose2()
     option3 = input("root@root:~# ")
     if option3 == '1':
@@ -228,6 +232,8 @@ if option2 == '1':
         print("\n")
         priv8ende()
 elif option2 == '2':
+    os.system("clear")
+    cipher()
     choose3()
     option4 = input("root@root:~# ")
     if option4 == '1':
