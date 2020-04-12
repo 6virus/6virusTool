@@ -96,14 +96,14 @@ def incryptsha512():
     input("Done .. Press Enter To Exit ..")
 def encodebase64():
     message1 = input(mawar+"insert The words to get it Base64 Hash : ")
-    message_bytes1 = message.encode('ascii')
+    message_bytes1 = message1.encode('ascii')
     base64_bytes1 = base64.b64encode(message_bytes1)
     base64_message1 = base64_bytes1.decode('ascii')
     print("Your Base64 hash is : "+ base64_message1)
     input("Done .. Press Enter To Exit ..")
 def decodebase64():
     message2 = input(mawar+"insert your Base64 Hash : ")
-    message_bytes2 = message.encode('ascii')
+    message_bytes2 = message2.encode('ascii')
     base64_bytes2 = base64.b64decode(message_bytes2)
     base64_message2 = base64_bytes2.decode('ascii')
     print("Your Base64 hash is : "+ base64_message2)
