@@ -1,6 +1,14 @@
 # 6virusTool
 &lt; Beta Tool...
 
+## Installtion .
+```bash
+git clone https://github.com/6virus/6virusTool
+cd 6virusTool
+chmod +x *
+python3 start.py
+```
+
 ## How to use DDos?
 Paste The IP address in "ip target" then choose any port the default is "80"
 
