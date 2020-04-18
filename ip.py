@@ -30,7 +30,6 @@ menu()
 option = input("root@root:~# ")
 if option == '1':
     added = input("Domain Target: ")
-    res1 = socket.gethost
     res = socket.gethostbyname(added)
     print("HOST IP : "+res)
 

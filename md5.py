@@ -23,7 +23,8 @@ def choose():
     print("===========Coded by @1zsb=============")
     print("                                      ")
     print("  [1] Incrypt            [2] Decrypt  ")
-    print("                 ==                   ")
+    print("                                      ")
+    print("          [3] Hash Analyzer           ")
     print("======================================")
     print("\n")
 
@@ -167,7 +168,56 @@ def decodepriv8():
     res0 = bytes.fromhex(hex2).decode('utf-8')
     print("Your Priv8 Cipher is : "+res0)
     input("Done .. Press Enter To Exit ..")
-
+def Analyzer():
+    os.system("clear")
+    cipher()
+    print("/\/\/\/\/\/\/\/\/\/\/\/\/\ ")
+    print("                         /")
+    print(" MD5 or MD4 length = 32  \ ")
+    print(" SHA1 length = 40        /")
+    print(" SHA224 length = 56      \ ")
+    print(" SHA256 length = 64      /")
+    print(" SHA384 length = 96      \ ")
+    print(" SHA512 length = 128     /")
+    print("                         \ ")
+    print("\/\/\/\/\/\/\/\/\/\/\/\/\/")
+    print("\n")
+    hash = input("[+] insert Your Hash : ")
+    if len(hash) == 32:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is MD5 or MD4 Hash [!] ")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif len(hash) == 40:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is SHA1 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif len(hash) == 56:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is SHA224 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif len(hash) == 64:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is SHA256 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif len(hash) == 96:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is SHA384 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif len(hash) == 128:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is SHA512 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
+    elif "=" in hash:
+        print("## ## ## ## ## ## ## ## ## ## ## ## #")
+        print("[!] Your Hash is Base64 [!]")
+        print("")
+        input("# Press Enter to Exit . . . #")
 
 def cipher():
     print("  ______   __            __                           ")
@@ -245,3 +295,5 @@ elif option2 == '2':
     elif option4 == '3':
         print("\n")
         decodepriv8()
+elif option2 == '3':
+    Analyzer()
